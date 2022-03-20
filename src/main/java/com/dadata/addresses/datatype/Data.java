@@ -86,8 +86,4 @@ public class Data {
     private String qc_geo;
     private String qc_complete;
     private String qc_house;
-    private String history_values;
-    private String unparsed_parts;
-    private String source;
-    private String qc;
 }

@@ -12,8 +12,8 @@ public class RequestProc implements Processor {
         Gson converter =new Gson();
         exchange.getIn().setHeader(Exchange.HTTP_METHOD, "POST");
         exchange.getIn().setHeader(Exchange.CONTENT_TYPE, "application/json");
+        exchange.getIn().setHeader("Authorization", "Token 8503bd93c81002f43816174a541cd9300e0afd5e" );
         exchange.getIn().setHeader(Exchange.CHARSET_NAME, "utf8");
-        exchange.getIn().setHeader(Exchange.AUTHENTICATION, "8503bd93c81002f43816174a541cd9300e0afd5e" );
 
         Locations[] locations = new Locations[]{new Locations()};
         locations[0].setCity_fias_id("7dfa745e-aa19-4688-b121-b655c11e482f");

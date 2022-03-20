@@ -1,4 +1,4 @@
-package com.dadata.addresses.Config;
+package com.dadata.addresses.config;
 
 import com.dadata.addresses.routers.MainRouter;
 import org.apache.camel.CamelContext;
@@ -15,6 +15,7 @@ public class AppConfig {
     CamelContext camelContext() throws Exception {
         CamelContext context = new DefaultCamelContext();
         context.addRoutes(new MainRouter());
+        context.start();
         return context;
     }
 

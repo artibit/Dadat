@@ -12,7 +12,7 @@ public class ResponceProc implements Processor {
 
         String responce =exchange.getIn().getBody(String.class);
         ResponceData data = converter.fromJson(responce, ResponceData.class);
-        exchange.getIn().setBody(data, ResponceData.class);
+        exchange.getOut().setBody(data, ResponceData.class);
 
     }
 }
